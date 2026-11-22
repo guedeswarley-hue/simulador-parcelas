@@ -6,6 +6,8 @@
   <title>Simulador de Vendas e Parcelas</title>
   <!-- Conecta este HTML ao nosso arquivo de visual (CSS) -->
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
 </head>
 <body>
 
@@ -91,5 +93,12 @@
 
   <!-- Conecta este HTML ao nosso arquivo de lógica (JavaScript) -->
   <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js")
+        .then(() => console.log("PWA registrado com sucesso!"))
+        .catch((erro) => console.log("Erro ao registrar PWA:", erro));
+    }
+  </script>
 </body>
 </html>

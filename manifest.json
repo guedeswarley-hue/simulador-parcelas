@@ -1,0 +1,16 @@
+{
+  "name": "Simulador de Vendas e Parcelas",
+  "short_name": "Simulador Pro",
+  "description": "Calcule parcelas, taxas da maquininha e envie orçamentos no WhatsApp.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2344/2344132.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
