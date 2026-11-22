@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Vendas e Parcelas</title>
+  <!-- Conecta este HTML ao nosso arquivo de visual (CSS) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header class="cabecalho">
+      <h1>Simulador de Vendas</h1>
+      <p>Calcule parcelas, taxas da maquininha e envie no WhatsApp</p>
+    </header>
+
+    <section class="card">
+      <!-- Campo 1: Valor da venda -->
+      <div class="campo">
+        <label for="valorVenda">Valor da venda (R$)</label>
+        <input type="number" id="valorVenda" placeholder="Ex: 250.00" step="0.01" min="0">
+      </div>
+
+      <!-- Campo 2: Taxa da maquininha -->
+      <div class="campo">
+        <label for="taxaMaquininha">Taxa total da maquininha (%)</label>
+        <input type="number" id="taxaMaquininha" placeholder="Ex: 4.99" step="0.01" min="0" value="0">
+      </div>
+
+      <!-- Campo 3: Número de parcelas -->
+      <div class="campo">
+        <label for="parcelas">Número de parcelas</label>
+        <select id="parcelas">
+          <option value="1">1x (À vista no crédito)</option>
+          <option value="2">2x</option>
+          <option value="3">3x</option>
+          <option value="4">4x</option>
+          <option value="5">5x</option>
+          <option value="6">6x</option>
+          <option value="7">7x</option>
+          <option value="8">8x</option>
+          <option value="9">9x</option>
+          <option value="10">10x</option>
+          <option value="11">11x</option>
+          <option value="12">12x</option>
+        </select>
+      </div>
+
+      <!-- Campo 4: Quem paga a taxa? -->
+      <div class="campo">
+        <label for="quemPaga">Quem absorve a taxa?</label>
+        <select id="quemPaga">
+          <option value="cliente">Repassar taxa para o cliente</option>
+          <option value="vendedor">Vendedor assume a taxa (sem juros)</option>
+        </select>
+      </div>
+
+      <!-- Botão principal -->
+      <button id="btnCalcular" class="btn-primario">Calcular Simulação</button>
+    </section>
+
+    <!-- Área de resultado (começa escondida até o usuário clicar em calcular) -->
+    <section id="areaResultado" class="card resultado oculto">
+      <h2>Resumo da Simulação</h2>
+      
+      <div class="linha-resultado">
+        <span>Valor final para o cliente:</span>
+        <strong id="resValorFinal">R$ 0,00</strong>
+      </div>
+
+      <div class="linha-resultado">
+        <span>Parcelamento:</span>
+        <strong id="resParcelas">1x de R$ 0,00</strong>
+      </div>
+
+      <div class="linha-resultado">
+        <span>Você (vendedor) recebe líquido:</span>
+        <strong id="resLiquido" class="destaque-verde">R$ 0,00</strong>
+      </div>
+
+      <div class="linha-resultado">
+        <span>Custo da taxa:</span>
+        <strong id="resTaxaValor" class="destaque-vermelho">R$ 0,00</strong>
+      </div>
+
+      <!-- Botão extra de utilidade real: compartilhar no WhatsApp -->
+      <button id="btnWhatsapp" class="btn-whatsapp">Enviar Orçamento no WhatsApp</button>
+    </section>
+  </main>
+
+  <!-- Conecta este HTML ao nosso arquivo de lógica (JavaScript) -->
+  <script src="script.js"></script>
+</body>
+</html>

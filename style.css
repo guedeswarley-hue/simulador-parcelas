@@ -1,0 +1,159 @@
+/* Reset básico para evitar diferenças entre navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  line-height: 1.5;
+  padding: 20px 14px;
+}
+
+/* Centraliza o app e limita a largura máxima para parecer um aplicativo */
+.container {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.cabecalho h1 {
+  font-size: 1.65rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.cabecalho p {
+  font-size: 0.92rem;
+  color: #475569;
+}
+
+/* Cartão principal */
+.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  margin-bottom: 16px;
+}
+
+/* Cada campo do formulário */
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1e293b;
+}
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Botão principal */
+.btn-primario {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primario:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-primario:active {
+  transform: scale(0.99);
+}
+
+/* Área de resultado */
+.resultado h2 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.linha-resultado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 0.96rem;
+}
+
+.linha-resultado span {
+  color: #475569;
+}
+
+.linha-resultado strong {
+  color: #0f172a;
+  text-align: right;
+}
+
+.destaque-verde {
+  color: #15803d !important;
+  font-size: 1.05rem;
+}
+
+.destaque-vermelho {
+  color: #b91c1c !important;
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #16a34a;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #15803d;
+}
+
+/* Classe utilitária para esconder elementos */
+.oculto {
+  display: none;
+}
